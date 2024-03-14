@@ -1,0 +1,12 @@
+{
+    "name": "pcc-dev-env",
+    "version": "0.1.0",
+    "private": true,
+    "description": "Dev environment for 🐧 can cook",
+    "scripts": {
+        "init-submodules": "git submodule update --remote --init --recursive && npm run pull-submodules",
+        "pull-submodules": "./pull-submodules.sh"
+    },
+    "author": "PenguinSatan",
+    "license": "UNLICENSED"
+}

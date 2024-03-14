@@ -1,0 +1,29 @@
+version: '3.8'
+services:
+  recipes:
+    build: recipes
+    ports:
+      - 4001:4001
+    environment:
+      TYPEORM_CONNECTION: postgres
+      TYPEORM_HOST: postgres
+      TYPEORM_PORT: 5432
+      TYPEORM_USERNAME: penguin
+      TYPEORM_PASSWORD: penguin
+      TYPEORM_DATABASE: recipes
+      TYPEORM_ENTITIES: ./build/entity/*.js
+      TYPEORM_MIGRATIONS: ./build/migration/*.js
+    volumes:
+      - ./recipes/src:/app/src/
+  postgres:
+    build: postgres
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_DB: pcc
+      POSTGRES_USER: pcc
+      POSTGRES_PASSWORD: pcc
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+volumes:
+  pgdata:

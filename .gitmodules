@@ -1,0 +1,10 @@
+[submodule "penguins-can-cook"]
+	path = penguins-can-cook
+	url = github.com/PenguinSatanJr/penguins-can-cook.git
+	ignore = all
+	branch = main
+[submodule "recipes"]
+	path = recipes
+	url = github.com/PenguinSatanJr/recipes.git
+	ignore = all
+	branch = main
